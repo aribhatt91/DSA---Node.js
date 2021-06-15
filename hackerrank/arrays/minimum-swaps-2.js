@@ -19,6 +19,7 @@ function minimumSwaps(arr) {
             map[element] = j;
             map[i+1] = i;
             count++;
+            console.log(arr);
         }
     }
 

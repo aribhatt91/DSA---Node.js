@@ -10,7 +10,7 @@ var threeSum = function(nums) {
         if(i > 0 && nums[i] === nums[i-1]){
             continue;
         }
-        if(nums[i] > 0){break}
+        if(nums[i] > 0){break;}
         var j = i+1, k = nums.length -1;
         while(j < k){
             var sum = nums[i] + nums[j] + nums[k];

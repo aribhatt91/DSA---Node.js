@@ -22,6 +22,9 @@ class Queue {
 		var len = this._que.length;
 		return len <= 0 ? null : this._que[len - 1];
 	}
+	isEmpty(){
+		return this._que.length === 0;
+	}
 }
 
 export default Queue;
