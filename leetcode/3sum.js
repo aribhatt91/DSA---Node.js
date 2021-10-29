@@ -3,14 +3,14 @@
  * @return {number[][]}
  */
 var threeSum = function(nums) {
-    nums = nums.sort(function(a, b){return a - b});
+    nums = nums.sort(function(a, b){return a - b;});
     console.log('sorted', nums);
     var res = [], temp = [];
     for(var i=0; i<nums.length-2; i++){
         if(i > 0 && nums[i] === nums[i-1]){
             continue;
         }
-        if(nums[i] > 0){break}
+        if(nums[i] > 0){break;}
         var j = i+1, k = nums.length -1;
         while(j < k){
             var sum = nums[i] + nums[j] + nums[k];
@@ -37,7 +37,8 @@ var threeSum = function(nums) {
             res = false;
         }
         return res;
-    }
+    };
+    
     for(var i=0; i< temp.length; i++){
         var present = false;
         for(var j=0; j<res.length; j++){

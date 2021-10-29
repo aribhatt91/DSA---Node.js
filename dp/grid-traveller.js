@@ -23,7 +23,7 @@ const gridTraveller = (m, n) => {
             if(j === 0 || i === 0){
                 col.push(1);
             }else {
-                col.push(col[j-1] + arr[i-1][j])
+                col.push(col[j-1] + arr[i-1][j]);
             }
         }
         arr.push(col);
