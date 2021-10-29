@@ -6,6 +6,9 @@ class TreeNode {
     }
 }
 
+/* 
+This method assumed both the n1 and n2 are present;
+*/
 const lca = (root, n1, n2) => {
     if(!root) return null;
 
@@ -15,6 +18,10 @@ const lca = (root, n1, n2) => {
 
     let lca_left = lca(root.left, n1, n2),
     lca_right = lca(root.right, n1, n2);
+
+    if(lca_left && lca_right) {
+        return root;
+    }
 
     return lca_left ? lca_left : lca_right;
 }

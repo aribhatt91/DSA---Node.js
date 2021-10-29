@@ -3,6 +3,9 @@ function swap(arr, i, j){
     arr[i] = arr[j];
     arr[j] = temp;
 }
+/* 
+https://www.youtube.com/watch?v=mmQyxyHoR5Y
+*/
 function minimumSwaps(arr) {
     let map = {}, count = 0;
 

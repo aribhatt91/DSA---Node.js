@@ -6,4 +6,8 @@ const knapsack = (wts, vals, i, max) => {
     }
 }
 
+const knapsack = (wts, vals, max) => {
+    
+}
+
 console.log(knapsack([5,6,10,7,9], [20, 22, 30, 25, 28], 0, 20));

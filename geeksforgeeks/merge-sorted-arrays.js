@@ -52,5 +52,5 @@ https://www.geeksforgeeks.org/merge-two-sorted-arrays-o1-extra-space/
         arr2.sort((a,b)=>(a-b));
     }
 
-    console.log(merge)
+    
 

@@ -65,6 +65,9 @@ const coinChangeMin = (SUM, bag, n) => {
     return Math.min(1 + coinChangeMin(SUM - bag[n-1], bag, n), coinChangeMin(SUM, bag, n-1));
 }
 
+/* 
+https://leetcode.com/problems/coin-change/submissions/
+*/
 const coinChangeMinDP = (SUM, bag) => {
     let table = [], m = bag.length;
     for (let i = 0; i <= m; i++) {
@@ -89,7 +92,12 @@ const coinChangeMinDP = (SUM, bag) => {
         }
     }
 
-    console.log(table);
+    //console.log(table);
+    if(SUM === 0){
+        return 0;
+    }else if(table[m][SUM] === Number.MAX_VALUE - 1){
+        return -1;
+    }
     return table[m][SUM];
 }
 

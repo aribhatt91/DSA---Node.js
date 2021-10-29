@@ -26,6 +26,8 @@
 
     let i=0, j=0, p = null, count = 0, md1=-1, md2=-1;
 
+
+
     while(i<nums1.length && j<nums2.length){
         if(nums1[i] < nums2[j]){
             p = nums1[i];
@@ -69,6 +71,11 @@
         }
     }
     console.log('ow', i, j, 'c', count, 'l', nums1.length, nums2.length, 'm', m, m1, m2);
+    if(m1>-1 && m2>-1){
+        if(i===m1){
+            
+        }
+    }
     if(i<nums1.length){
         console.log('i<nums1.length');
         if(m>-1){
@@ -128,6 +135,36 @@
             }
             return (md1+md2)/2;
         }
+    }
+};
+
+var findMedianSortedArrays = function(nums1, nums2) {
+    let m = -1 ,m1 = -1,m2 = -1;
+    if((nums1.length + nums2.length) % 2 === 0){
+        m1 = (nums1.length + nums2.length)/2;
+        m2 = m1+1;
+    }else {
+        m = Math.ceil((nums1.length + nums2.length)/2);
+    }
+    console.log(m, m1,m2);
+    if(nums1.length === 0 && nums2.length === 0){
+        return 0;
+    }else if(nums1.length === 0 || nums2.length === 0){
+        let arr = nums1.length === 0 ? nums2 : nums1;
+        if(m > -1){
+            return [arr[m-1]];
+        }else {
+            return (arr[m1-1] + arr[m2-1])/2;
+        }
+    }
+
+    let i=0, j=0, p = null, count = 0, md1=-1, md2=-1;
+
+    let arr = [].concat(nums1).concat(nums2).sort((a,b)=>a-b);
+    if(m>-1){
+        return arr[m-1];
+    }else if(m1>-1 && m2>-1){
+        return (arr[m1-1]+arr[m2-1])/2;
     }
 };
 

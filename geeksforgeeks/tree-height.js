@@ -1,7 +1,7 @@
 /* 
 Diameter of a tree is the longest path between two leaves in a tree
 Dynamic programming problem
-
+https://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/?ref=leftbar-rightbar
 Hypotheisis
 1. Find height of left and right subtree 
 2. The longest path may either be a sum of left, right and the node itself

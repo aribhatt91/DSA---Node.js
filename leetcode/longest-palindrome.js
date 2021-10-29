@@ -36,3 +36,7 @@
     return s.substring(START, START+max);
     //return max;
 }
+
+/* 
+https://www.youtube.com/watch?v=y2BD4MJqV20
+*/

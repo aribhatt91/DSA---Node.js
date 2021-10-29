@@ -22,6 +22,7 @@ function commonChild(s1, s2) {
 
     console.log(dp);
     console.log(dp[M][N]);
+    return dp[M][N];
 }
 
 commonChild('ABCD', 'ACBD');

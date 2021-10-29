@@ -10,31 +10,30 @@ Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascen
  * @returns {number[]}
 */
 
-
+/* Counting sort */
     
 function sort012(arr, N)
 {
     //your code here
-    var swap = function(arr, i, j) {
-        var temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-    for (let i = 0, j=N-1; i < N; ) {
-        if(i > 0){
-            if(arr[i] < arr[i-1]){
-                swap(arr,i, i-1);
-            }
+    var ones =0, twos=0,zeroes=0;
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] == 0){
+            zeroes++;
+        }else if(arr[i] === 1){
+            ones++;
+        }else if(arr[i] === 2){
+            twos++;
         }
-        i++;
     }
-    for (let i = N-2, j=N-1; i >= 0; ) {
-        if(i > 0){
-            if(arr[i+1] < arr[i]){
-                swap(arr,i, i+1);
-            }
+    for (let i = 0; i < arr.length; i++) {
+        if(i<zeroes){
+            arr[i] = 0;
+        }else if(i < (zeroes + ones)){
+            arr[i] = 1;
+        }else {
+            arr[i] = 2;
         }
-        i--;
+        
     }
 }
 

@@ -1,4 +1,9 @@
 
+
+/* 
+https://leetcode.com/problems/generate-parentheses/submissions/
+https://www.youtube.com/watch?v=qBbZ3tS0McI
+*/
 let arr = [];
 const recurse = (open, close, n, str) => {
     if(str.length === 2*n){
@@ -15,6 +20,7 @@ const recurse = (open, close, n, str) => {
 }
 
 var generateParenthesis = function(n) {
+    arr = [];
     recurse(n,n,n, "");
     console.log(arr);
     return arr;

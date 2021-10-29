@@ -1,6 +1,8 @@
 /* 
 f - floors
 e - eggs
+
+https://www.geeksforgeeks.org/egg-dropping-puzzle-dp-11/
 */
 
 /* 

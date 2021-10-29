@@ -57,3 +57,47 @@ class Solution
         return dp[3][n];
     }
 }
+
+/* 
+https://www.geeksforgeeks.org/maximize-the-number-of-segments-of-length-p-q-and-r/
+*/
+class Solution
+{
+    maximizeTheCutsUtil(n, x, y, z)
+    {
+        // code here
+        if(n==0){return 0}
+        if(n < x && n < y && n < z){return -1}
+        
+        
+        return 1 + Math.max(this.maximizeTheCutsUtil(n-x, x, y, z), this.maximizeTheCutsUtil(n-y, x, y, z), this.maximizeTheCutsUtil(n-z, x, y, z))
+        
+    }
+    //Function to find the maximum number of cuts.
+    maximizeTheCuts(n, x, y, z)
+    {
+        // code here
+        let sizes = [x,y,z];
+        sizes.sort((a,b)=>a-b);
+        let dp = (new Array(n+1)).fill(-1);
+
+        dp[0] = 0;
+
+        for (let i = 0; i < l+1; i++) {
+            if(dp[i] === -1){
+                continue;
+            }
+
+            if(i+x <= n){
+                dp[i] = Math.max(dp[i+x], 1+dp[i]);
+            }
+            if(i+y <= n){
+                dp[i] = Math.max(dp[i+y], 1+dp[i]);
+            }
+            if(i+z <= n){
+                dp[i] = Math.max(dp[i+z], 1+dp[i]);
+            }
+            
+        }
+    }
+}

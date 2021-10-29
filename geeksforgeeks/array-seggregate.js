@@ -21,7 +21,7 @@ const seggregate = (arr) => {
             j--;
         }
     }
-    console.log(arr, j+1, i);
+    console.log(arr, j+1,  i);
 }
 
 const main = () => {
